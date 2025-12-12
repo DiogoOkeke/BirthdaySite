@@ -150,8 +150,8 @@ figure img{
 
 .nav-bar{
  position: relative;
- top: 2.5rem;
- right: 4rem;
+ top: 2.5vh;
+ right: 4vw;
  display: flex;
  flex-direction: column;
  margin-left: 21rem;
@@ -266,8 +266,8 @@ main.mainSite{
 
 div.timeFactor{
    position: relative;
-   top: 2.5rem;
-   left: 4rem;
+   top: 2.5vh;
+   left: 4vw;
     z-index: 4;
     color: white;
     font-weight: bolder;
