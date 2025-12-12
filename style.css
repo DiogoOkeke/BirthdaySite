@@ -1,0 +1,520 @@
+*, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection{
+     color: orangered;
+}
+
+ body{
+   /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Quintessential", Arial, Helvetica, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    transition: all .05s ease;
+}
+
+:root{
+  --soft-blush: #ffe5ecff;
+ --pastel-pink: #ffc2d1ff;
+ --cherry-blossom: #ffb3c6ff;
+ --cotton-candy: #ff8fabff;
+--petal-rouge: #fb6f92ff;
+}
+
+ html{
+    scroll-behavior: smooth;
+}
+
+h1.percentageDisplay{
+    font-size: 8.5rem;
+    font-weight: bold;
+    color: var(--cotton-candy);
+    letter-spacing: .4rem;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+}
+
+div.progressBar{
+    margin: 0 auto;
+    margin-top: 45rem;
+    margin-bottom: 1.5rem;
+    width: 90%;
+    height: 10%;
+    border-radius: 5rem;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--soft-blush);
+    box-shadow: 4.5px 6px 5px grey;
+    
+}
+
+div.progressBar > div.progressState{
+    content: '';
+    width: .5%;
+    height: 10%;
+    background-color: var(--petal-rouge);
+    animation: load 7s linear 1s forwards;
+}
+
+@keyframes load{
+    3%{
+        width: 3%;
+    }
+    23%{
+        width: 23%;
+    }
+    27%{
+        width: 25%;
+    }
+    48%{
+        width: 48%;
+    }
+    52%{
+        width: 50%;
+    }
+    73%{
+        width: 73%;
+    }
+    77%{
+        width: 75%;
+    }
+    98%{
+        width: 98%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+section.loadSite > p.loadingText{
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: var(--cotton-candy);
+    letter-spacing: .15rem;
+}
+
+/* Main Site */
+
+.mainSite.activeMainSite{
+ display: block;
+}
+
+section.header{
+  margin: 0;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+  height: 95vh;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0,  0.5)), url(header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*width: 100%;
+  height: 100vh;*/
+}
+
+div.bar-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+figure img{
+  margin: 0;
+  padding: 0;
+}
+
+/*.video-overlay{
+  position: absolute;
+ 
+  z-index: 2;
+}*/
+
+/*.image-content{
+  
+}*/
+
+/* Nav bar */
+
+.nav-bar{
+ position: relative;
+ top: 2.5rem;
+ right: 4rem;
+ display: flex;
+ flex-direction: column;
+ margin-left: 21rem;
+}
+
+.first-bar,
+.mid-bar,
+.last-bar{
+ background-color: white;
+ border-radius: 10px;
+ height: 1vh;
+ width: 11vw;
+ position: relative;
+ transition: all .7s linear;
+}
+
+.mid-bar{
+ margin-block: .6rem;
+}
+
+.nav-bar.true{
+ margin-top: .8rem;
+}
+
+.first-bar.true{
+ transform: rotate(128deg);
+}
+
+.mid-bar.true{
+ transform: translateX(-50px);
+ background-color: transparent;
+}
+
+.last-bar.true{
+ transform: rotate(-135deg) translate(1.62rem, 1.8rem);
+}
+
+
+/*Nav Content*/
+
+.nav-content{
+  z-index: 4;
+ width: 90vw;
+ height: 50vh;
+ top: 9.5rem;
+ text-align: center;
+ background-color: white;
+ box-shadow: 5px 6px 7px black;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ position: absolute;
+ right: 1.5rem;
+ border-radius: 2rem;
+ display: none;
+}
+
+.nav-content a{
+  font-family: "Quintessential", Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+ text-decoration: none;
+ font-weight: bold;
+ color: var(--petal-rouge);
+}
+
+.nav-content a:hover{
+ color: var(--cherry-blossom);
+}
+
+.nav-content a:nth-child(2){
+ margin-block: 2rem;
+}
+
+.nav-content a:nth-child(3){
+ margin-bottom: 2rem;
+}
+
+.nav-content a:nth-child(4){
+  margin-bottom: 2rem;
+}
+
+.nav-content.true{
+ display: flex;
+ animation: display 1.4s linear;
+}
+
+@keyframes display{
+ from{
+  right: -20rem;
+ }
+}
+
+
+main.mainSite{
+ display: none;
+ position: relative;
+ animation: mainSite 3s linear 0s;
+ animation-timing-function: cubic-bezier(0.6, 0.5, 0.07, .04);
+ animation-fill-mode: forwards;
+ overflow: hidden;
+}
+
+@keyframes mainSite{
+ from{
+  bottom: -100%;
+ }
+ to{
+  bottom: .1%;
+ }
+}
+
+div.timeFactor{
+   position: relative;
+   top: 2.5rem;
+   left: 4rem;
+    z-index: 4;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.15rem;
+    white-space: nowrap;
+}
+
+div.image-content > div.message{
+   padding: 0 1rem;
+    position: relative;
+    top: 5rem;
+    margin: 0 auto;
+    font-weight: bold;
+    color: white;
+    font-size: 5rem;
+    line-height: 13rem;
+}
+
+/* About section */
+
+section#about{
+  padding: 3rem 2rem 3rem 2rem;
+  letter-spacing: .1rem;
+  background-color: var(--petal-rouge);
+}
+
+section#about h1,
+section#wish-list h1{
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  letter-spacing: .3rem;
+  line-height: 3rem;
+  filter: drop-shadow(3px 2px 1px black);
+  -webkit-text-stroke-width: 2.5px;
+}
+section#about p{
+  font-size: 1rem;
+  line-height: 2rem;
+  color: white;
+}
+
+section#about p:nth-child(3){
+  margin-block: 1rem;
+}
+
+section#about p:last-child{
+  margin-top: 1rem;
+}
+
+/* Photo grid */
+
+section.photo-grid{
+  padding: 2.6rem 0rem 2rem 0rem;
+}
+
+section.photo-grid h1{
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+  letter-spacing: .23rem;
+  color: var(--petal-rouge);
+/*  filter: drop-shadow(2px 2px 1px black);
+  -webkit-text-stroke-width: 2.5px;*/
+}
+
+section.photo-grid img{
+  width: 135px;
+  height: 135px;
+  object-fit: cover;
+}
+
+div.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /*grid-template-areas: 
+  "a b c"
+  "d e f"
+  "g e h"
+  "i j k"
+  ;*/
+}
+
+div.grid-container div{
+  margin: 0;
+}
+
+/*div.a{
+  grid-area: a;
+}
+
+div.b{
+  grid-area: b;
+}
+
+div.c{
+  grid-area: c;
+}
+
+div.d{
+  grid-area: d;
+}
+
+div.e{
+  grid-area: e;
+}
+
+div.f{
+  grid-area: f;
+}
+
+div.g{
+  grid-area: g;
+}
+
+div.h{
+  grid-area: h;
+}
+
+div.i{
+  grid-area: i;
+}
+
+div.j{
+  grid-area: j;
+}*/
+
+
+/* Messages from Friends */
+
+section#well-wishers{
+  padding: 2.6rem 2rem 2rem 2rem;
+  background-color: var(--soft-blush);
+}
+
+section#well-wishers h1{
+ /* filter: drop-shadow(2px 2px 1px black);
+  -webkit-text-stroke-width: 2.5px;*/
+  letter-spacing: .3rem;
+  line-height: 3rem;
+  font-size: 2.1rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  padding: 0;
+  color: var(--petal-rouge);
+}
+
+section#well-wishers div{
+  font-family: "Parisienne" Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin-block: 1.5rem;
+  border-radius: .8rem;
+  box-shadow: 7px 9px 2px grey;
+  padding: 2.5rem 1.7rem .8rem;
+  letter-spacing: .1rem;
+  line-height: 1.7rem;
+  color: var(--petal-rouge);
+}
+div figure{
+  margin-block: 1rem;
+}
+
+div.left{
+  background-color: white;
+  color: var(--petal-rouge);
+}
+
+div.left > figcaption{
+  color: var(--petal-rouge);
+}
+
+div.right{
+  background-color: var(--petal-rouge);
+  color: white;
+}
+
+div.right  figcaption{
+  color: white;
+}
+
+div.right p{
+  color: white;
+}
+
+div.right > figure{
+  text-align: right;
+}
+
+section#well-wishers img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+section#well-wishers figcaption{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+div.emma-right{
+  background-color: var(--petal-rouge);
+}
+
+p.emma{
+  margin-bottom: 1.5rem;
+}
+/* Wish List */
+
+section#wish-list{
+  padding: 3rem 2rem 3rem 2rem;
+  letter-spacing: .1rem;
+  line-height: 2rem;
+  background-color: var(--petal-rouge);
+  color: white;
+}
+
+section#wish-list h1{
+  margin-bottom: 1.5rem;
+}
+
+section#wish-list div.container{
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.7rem;
+}
+
+section#wish-list div.container div:first-child{
+  margin-right: 2.5rem;
+}
+
+section#wish-list p.last-child{
+  margin-top: 1.5rem;
+}
+
+footer{
+  padding: 2rem;
+  color: var(--petal-rouge);
+  font-size: .69rem;
+  font-weight: bold;
+  text-align: center;
+}
